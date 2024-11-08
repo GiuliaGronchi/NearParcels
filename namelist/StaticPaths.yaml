@@ -1,0 +1,10 @@
+# Input netCDF data files folder
+INPUT_FILES: "input/envFields/"
+
+# Experiments products folder
+EXP_PROD: "output/MEDSEA_SENSITIVITY"
+#EXP_PROD: "output/MEDSEA"
+
+
+
+

@@ -1,0 +1,15 @@
+#MEDSEA
+z0: -810 #-107 # depth of the release (initial vertical coordinate < 0) [m]
+x0: 0 # zonal position of the release [m]
+y0: 0 # meridional position of the release [m]
+c0: 1 # initial oil concentration [kg/kg]
+T0: 13. # initial oil temperature [ºC]
+S0: 0 #initial oil salinity [psu]
+b0: 0.05 # nozzle radius (equals initial cylinder radius) [m]
+u0: 0 # initial velocity x-component [m s^-1]
+v0: 0 # initial velocity y-component [m s^-1]
+w0: 2 # initial velocity z-component [m s^-1]
+rho_oil_0: 890 # oil density at standard temperature T_oil_0 [kg m^-3]
+T_oil_0: 15.5 # standard oil temperature [ºC]
+spill_lat: 40.94 # latitude of the spill
+spill_lon: 18.36 # longitude of the spill

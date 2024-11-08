@@ -166,16 +166,16 @@ cython_debug/
 *.ipynb
 
 # product folder
-output/
+#output/
 
 # input data folder
-input/
+#input/
 
 # Input/Output files
 #*.txt
 #*.nc
 #*.csv
-namelist/*.yaml
+#namelist/*.yaml
 #*.png
 
 

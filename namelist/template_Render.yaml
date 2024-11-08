@@ -1,0 +1,12 @@
+# Beside the default plots, choose which custom plots do render
+custom_cylinder: # if True plot cylinder properties 
+custom_entrain: # if True plot the entraining fluxes and entrainment coefficient
+custom_buoyancy: # if True plot the plume buoyancy
+
+
+
+
+
+
+
+

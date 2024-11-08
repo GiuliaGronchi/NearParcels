@@ -1,0 +1,22 @@
+SEA_AREA: 'MEDSEA' 
+PRODUCT_ID: 'MEDSEA_MULTIYEAR_PHY_006_004' 
+# Coordinates of the area for the download
+LON_MIN: 15 
+LON_MAX: 20   
+LAT_MIN: 37  
+LAT_MAX: 42    
+# Time-period of the download (daily data)
+START_YEAR: 2020
+START_MONTH: 8
+START_DAY: 15
+START_HOUR: 00 # initial hour
+END_YEAR: 2020
+END_MONTH: 8
+END_DAY: 16
+END_HOUR: 00 # end hour
+# Depth range of the download
+DEPTH_MIN: 0. # minimum depth
+DEPTH_MAX: 900. # maximum depth
+
+
+

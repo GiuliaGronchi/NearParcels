@@ -1,0 +1,14 @@
+# Numerical simulation parameters
+dt: # simulation time-step [s]
+time_max: # total simulation time [min]
+ncyl: 1 # total number of generated cylinders
+#Entrainment modelling parameters
+entrain_params:
+  total_entrain: 0 # 0: max(Qs,Qf); 1: sum(Qs,Qf)
+  # Shear component experimental coefficients
+  a1: 0.08061017305526642
+  a2: 0.09793428919433685
+  a3: 5 
+
+
+

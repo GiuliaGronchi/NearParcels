@@ -1,0 +1,11 @@
+# Numerical simulation parameters
+dt: 0.25 # simulation time-step [s]   #0.25 medsea  #0.01 northsea
+time_max: 150 # total simulation time [min]   #150 min medsea  # 8 min northsea
+ncyl: 1 # total number of generated cylinders
+#Entrainment modelling parameters
+entrain_params:
+  total_shear: 0 # 0: max(Qs,Qf); 1: sum(Qs,Qf)
+  # Shear component experimental coefficients
+  a1: 0.08061017305526642
+  a2: 0.09793428919433685
+  a3: 5 
