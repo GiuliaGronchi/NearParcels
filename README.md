@@ -1,6 +1,6 @@
 # UWORM-1
 
-UWORM-1 (UnderWater Oil Release Model, version 1.0) is a Python-based simulator for subsurface oil spills with a plume model approach.
+UWORM-1 is a Python-based simulator for subsurface oil spills with a plume model approach.
 
 To run UWORM-1, install a pre-configured conda virtual environment. To create the environment:
 
@@ -28,7 +28,5 @@ To run the 2 test cases (MEDSEA, NORTHSEA): fill the namelists with values relat
 
 UWORM-1 was developed at the Euro-Mediterranean Center on Climate Change Foundation (CMCC) in Lecce, Italy
 
-Giulia Gronchi, Nadia Pinardi, 
+Giulia Gronchi, Nadia Pinardi,
 Megi Hoxhaj, Yordany Morejon Loyola, Mario Salinas, Igor Atake
-
-Latest update: 2024-06-08
