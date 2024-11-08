@@ -1,0 +1,21 @@
+
+        # Initial plume state:
+            # Release Depth [m]: -600
+            # Release Lat and Lon [Deg]: (0, 0)
+            # Spilled oil volume [m^3]: 141
+            # Velocity [m s^-1]: 2.0
+            # Zonal current [m s^-1] = 0.001
+            # Meridional current [m s^-1] = -0.041
+            # Ambient ocean density [kg m^-3] = 1029.2
+            # Oil density [kg m^-3] = 890.8
+            # Oil mass fraction [adim] = 1
+        
+        # Final plume state: subsurface
+            # Total simulation time [min]: 150
+            # Radius [m]: 120
+            # Oil concentration [adim]: 0.00011
+            # Zonal displacement [m]: -12
+            # Meridional displacement [m]: -189
+            # Neutral buoyancy [m]: -297
+            # Maximum height [m]: -245
+        

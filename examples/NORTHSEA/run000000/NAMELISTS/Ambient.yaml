@@ -1,0 +1,21 @@
+SEA_AREA: 'NORTHSEA' 
+PRODUCT_ID: 'NWSHELF_MULTIYEAR_PHY_004_009' 
+# Coordinates of the area for the download
+LON_MIN: -5 
+LON_MAX: 5    
+LAT_MIN: 45
+LAT_MAX: 65
+# Time-period of the download (daily data)
+START_YEAR: 1995
+START_MONTH: 8
+START_DAY: 1
+START_HOUR: 00 
+END_YEAR: 1995
+END_MONTH: 8
+END_DAY: 2
+END_HOUR: 00 
+# Depth range of the download
+DEPTH_MIN: 0. 
+DEPTH_MAX: 200. 
+
+

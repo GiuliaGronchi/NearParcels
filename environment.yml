@@ -1,0 +1,22 @@
+name: uworm-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas=1.3
+  - xarray=0.21
+  - numpy=1.23
+  - scipy
+  - seawater
+  - matplotlib
+  - xlrd
+  - dask
+  - motuclient
+  - pyyaml
+  - tqdm
+  - pip:
+      - notebook
+      - ipywidgets
+      - copernicusmarine==1.1.0
+      - munch==4.0.0

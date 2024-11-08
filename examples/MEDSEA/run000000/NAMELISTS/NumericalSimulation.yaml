@@ -1,0 +1,13 @@
+# Numerical simulation parameters
+dt: 0.25 
+time_max: 150 
+ncyl: 1
+#Entrainment modelling parameters
+entrain_params:
+  total_shear: 0 
+  # Shear component experimental coefficients
+  a1: 0.08061017305526642
+  a2: 0.09793428919433685
+  a3: 5 
+
+
