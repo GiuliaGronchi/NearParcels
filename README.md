@@ -28,7 +28,8 @@ Inside the MAIN.py, you can decide which of the following actions to be undertak
 
 4 - Visualize the plume variables and the ocean data
 
-To run the 2 test cases (called respectively MEDSEA, NORTHSEA): fill the namelists with values related to the respective experiment, change the StaticPaths.yaml with the chosen experiment folder, run the MAIN.py. This will create a data folder and a product folder for the selected experiment.
+To run the 2 test cases (MEDSEA, NORTHSEA): fill the namelists with values related to the respective experiment, change the StaticPaths.yaml with the chosen experiment folder, run the MAIN.py. This will create a data folder and a product folder for the selected experiment.
+
 
 
 
@@ -36,12 +37,3 @@ UWORM-1 was developed at the Euro-Mediterranean Center on Climate Change Foundat
 
 Giulia Gronchi, Nadia Pinardi,
 Megi Hoxhaj, Yordany Morejon Loyola, Mario Salinas, Igor Atake
-
-
-
-UWORM-1 was developed at the Euro-Mediterranean Center on Climate Change Foundation (CMCC) in Lecce, Italy
-
-Giulia Gronchi, Gianandrea Mannarini, Nadia Pinardi, Giovanni Coppini, 
-Megi Hoxhaj, Yordany Morejon Loyola, Mario Salinas, Igor Atake
-
-Latest update: 2024-06-08
