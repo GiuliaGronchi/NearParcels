@@ -9,18 +9,16 @@ To run UWORM-1, install a pre-configured conda virtual environment. To create th
 To set up an oil spill experiment, go to the namelist directory (UWORM-1/namelist). Here, fill the namelists yaml files. 
 
 Define the spill release parameters (i.e. the initial condition), such as spill location and nozzle diameter within the namelist file Release.yaml. 
-
 Then, select the spill location and the relative ambient ocean data (temperature, salinity, zonal and meridional currents) within the namelist file Ambient.yaml. The ocean data is gathered and downloaded from the Coperinus Marine Service (make sure to have a registered account!). 
 
 Some other relevant numerical parameters can be tuned in the file NumericalSimulation.yaml. 
-
 Finally, choose the visualizations to be rendered in the namelist file Render.yaml.
 
-To launch a UWORM-1 simulation, run the MAIN.py from the UWORM-1 directory.
+To launch a UWORM-1 simulation, run the MAIN.py from the UWORM-1 directory:
 
     python MAIN.py
 
-Inside the MAIN.py, you can decide which ones of the following actions to be undertaken. Of course, the first time an experiment is launched, you should run them all :
+Inside the MAIN.py, you can decide which of the following actions to be undertaken. Of course, the first time an experiment is launched, you should run them all :
 
 1 - Download the ocean data from Copernicus Marine Service
 
