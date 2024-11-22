@@ -10,7 +10,7 @@ import xarray as xr
 import numpy as np
 import pandas as pd
 from datetime import datetime
-import seawater as sw
+import gsw
 import os
 
 cur_mag=1
@@ -58,7 +58,7 @@ def interpolate_data(exp_dir, ambient_namelist, release_namelist, static_paths):
             df[var] = var_depth
 
     # Calculate density using the seawater library
-    df['rhoa'] = sw.eos80.dens0(df['so'], df['thetao'])
+    df['rhoa'] = gsw.density.rho(df['so'], df['thetao'],1)
 
 
     # Drop NaN values and save to CSV

@@ -118,7 +118,7 @@ def plume(exp_dir, runId, ambient_namelist, numerical_namelist, release_namelist
 
         # Oil and plume density, reduced gravity
         p['rho_oil'] = rho_oil_0 * (1 - p['c_T'] * (T0 - T_oil_0 ))
-        p['rho_w'] = sw.eos80.dens0(S0,T0)
+        p['rho_w'] = gsw.density.rho(S0,T0,1)
         p['rho'] = p['rho_oil'] * p['rho_w'] / (p['rho_w'] * c0 + p['rho_oil'] * (1 - c0))
         p['g1'] = reduced_g(p)
 
@@ -192,7 +192,7 @@ def plume(exp_dir, runId, ambient_namelist, numerical_namelist, release_namelist
 
                 p['c'] = c
                 p['rho_oil'] = rho_oil_0 * (1 - p['c_T'] * (T - T_oil_0))
-                p['rho_w'] = sw.eos80.dens0(S,T)
+                p['rho_w'] = gsw.density.rho(S,T,1)
                 p['rho'] =  p['rho_oil']* p['rho_w'] / (p['rho_oil']*(1-c) + p['rho_w']*c)
                 p['g1']= reduced_g(p)
 

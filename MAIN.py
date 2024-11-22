@@ -18,7 +18,7 @@ DO_PLOT = False
 DO_MERGE = False
 
 # De-comment what you want to run from the flag list below
-DO_DOWNLOAD = True
+#DO_DOWNLOAD = True
 DO_PLUME = True
 DO_PLOT = True
 #DO_MERGE = True

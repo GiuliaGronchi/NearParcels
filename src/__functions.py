@@ -10,9 +10,9 @@ import numpy as np
 import pandas as pd
 from scipy.interpolate import interp1d
 import matplotlib.pyplot as plt
-import seawater as sw
 from scipy import interpolate
 from scipy.interpolate import RegularGridInterpolator
+import gsw
 import os
 
 # # Calculation of reduced gravity
