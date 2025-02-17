@@ -37,11 +37,21 @@ This will do:
 
 The near-field simulation will run, depending on the oil and ambient conditions, up to a **neutral-buoyancy** depth.
 
-## Study-cases
+## Study-case
 
-I prepared two show cases, in the Mediterranean Sea and in the North Sea. You can run these two experiment on your own to become familiar with the model.
+There you have a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
 
+### Mediterranean Sea
 
+In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform, located at a depth of 800 m at 40.94 N - 18.36 E :
+![med](/examples/MEDSEA/MED0min.png)
+
+Let us consider a potential oil spill, starting on 1st August 1995 at 12 am. 
+The near-field simulation predicts a plume phase of 40 min, reaching a depth of -580 m and a horizontal spreading of 200 m
+![med](/examples/MEDSEA/run000000/PICS/traj_env_xz.png)
+
+While rising, the oil increasingly incorporates water, increasing its density and slowing down to a neutral buoyancy level. While the oil concentration diminishes in time, the plume velocity decreases to 0
+![med](/examples/MEDSEA/run000000/PICS/oilconc_vel.png)
 
 
 
