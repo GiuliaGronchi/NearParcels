@@ -39,20 +39,18 @@ The near-field simulation will run, depending on the oil and ambient conditions,
 
 ## Study-case
 
-There you have a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
+[Here](/examples/MEDSEA) you have a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
 
 ### Mediterranean Sea
-
-In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform, located at a depth of 800 m at 40.94 N - 18.36 E :
+In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform (40.94 N ; 18.36 E) at a depth of 800 m:
 ![med](/examples/MEDSEA/MED0min.png)
 
 Let us consider a potential oil spill, starting on 1st August 1995 at 12 am. 
-The near-field simulation predicts a plume phase of 40 min, reaching a depth of -580 m and a horizontal spreading of 200 m
+The near-field simulation predicts a plume phase of 40 min, reaching a depth of -580 m and a horizontal spreading of 200 m, together with a south-eastward drift:
 ![med](/examples/MEDSEA/run000000/PICS/traj_env_xz.png)
 
-While rising, the oil increasingly incorporates water, increasing its density and slowing down to a neutral buoyancy level. While the oil concentration diminishes in time, the plume velocity decreases to 0
+While rising, the oil increasingly incorporates water, increasing its density and slowing down to a neutral buoyancy level. While the oil concentration diminishes in time, the plume velocity decreases to zero:
 ![med](/examples/MEDSEA/run000000/PICS/oilconc_vel.png)
 
-
-
+Due to loss of momentum, the plume corporate behavior is then lost and single oil parcels evolve independently. The second-stage of the deep spill evolution is modelled with a [Far-field simulator](https://github.com/GiuliaGronchi/FarParcels).
 
