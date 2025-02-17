@@ -1,39 +1,48 @@
-# UWORM-1
+## Near-field oil model
+
+In the near-field of the release, polluting parcels behave collectively as a plume in the surrounding ocean.
 
 UWORM (UnderWater Oil Release Model) version 1.0 is a Python-based simulator for subsurface oil spills with a plume model approach.
 
-To run UWORM-1, install a pre-configured conda virtual environment. To create the environment:
+### Pre-configuration
+To run the model, create a pre-configured conda environment:
 
     conda env create -n uworm environment.yml
+    
+### Set up a spill scenario
+To set up a new oil spill scenario, fill the relevant fields in the UWORM-1/namelist files .yaml
 
-To set up an oil spill experiment, go to the namelist directory (UWORM-1/namelist). Here, fill the namelists yaml files. 
+- Define the spill **release**, such as spill location and nozzle diameter within Release.yaml
+- Select the **ambient** ocean data (temperature, salinity, zonal and meridional currents) within Ambient.yaml
+  
+The ocean data will be automatically collected and downloaded from [Copernicus Marine Data Store](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
 
-Define the spill release parameters (i.e. the initial condition), such as spill location and nozzle diameter within the namelist file Release.yaml. 
-Then, select the spill location and the relative ambient ocean data (temperature, salinity, zonal and meridional currents) within the namelist file Ambient.yaml. The ocean data is gathered and downloaded from the Coperinus Marine Service (make sure to have a registered account!). 
+Decide which visuals and plots you want to see in Render.yaml.
 
-Some other relevant numerical parameters can be tuned in the file NumericalSimulation.yaml. 
-Finally, choose the visualizations to be rendered in the namelist file Render.yaml.
+### Run a spill simulation
 
-To launch a UWORM-1 simulation, run the MAIN.py from the UWORM-1 directory:
+Run a near-field simulation:
 
-    python MAIN.py
+    python MAIN.py 
+    
+This will do:
 
-Inside the MAIN.py, you can decide which of the following actions to be undertaken. Of course, the first time an experiment is launched, you should run them all :
+1. Download the ocean data (u zonal current, v meridional current, T temperature, S salinity)
 
-1 - Download the ocean data from Copernicus Marine Service
+2. Interpolate horizontally the ocean data on the spill location, obtaining depth-profiles of u,v,T,S
 
-2 - Interpolate the ocean data at the spill location, obtaining vertical profiles of u,v,T,S
+3. Run the plume evolution
 
-3 - Run the plume simulation, obtaining the time-evolution of the spill
+4. Obtain the model output and visualize the plume trajectory, shape evolution, oil concentration, velocity
 
-4 - Visualize the plume variables and the ocean data
+The near-field simulation will run, depending on the oil and ambient conditions, up to a **neutral-buoyancy** depth.
 
-To run the 2 test cases (MEDSEA, NORTHSEA): fill the namelists with values related to the respective experiment, change the StaticPaths.yaml with the chosen experiment folder, run the MAIN.py. This will create a data folder and a product folder for the selected experiment.
+## Study-cases
+
+I prepared two show cases, in the Mediterranean Sea and in the North Sea. You can run these two experiment on your own to become familiar with the model.
 
 
 
 
-UWORM-1 was developed at the Euro-Mediterranean Center on Climate Change Foundation (CMCC) in Lecce, Italy
 
-Giulia Gronchi, Nadia Pinardi,
-Megi Hoxhaj, Yordany Morejon Loyola, Mario Salinas, Igor Atake
+
