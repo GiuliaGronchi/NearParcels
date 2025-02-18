@@ -42,7 +42,7 @@ The near-field simulation will run, depending on the oil and ambient conditions,
 [Here](/examples/MEDSEA) you have a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
 
 ### Mediterranean Sea
-In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform (40.94 N ; 18.36 E) at a depth of 800 m:
+In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform (18.327114 E ; 40.930188 N) at a depth of 800 m:
 ![med](/examples/MEDSEA/MED0min.png)
 
 Let us consider a potential oil spill, starting on 1st August 1995 at 12 am. 
