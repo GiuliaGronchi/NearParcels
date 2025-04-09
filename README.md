@@ -1,6 +1,6 @@
-## Near-field oil model
+## Near-field 
 
-In the near-field of the release, polluting parcels behave collectively as a plume in the surrounding ocean.
+In the near-field region of an oil spill, oil parcels behave collectively, expanding like a plume in the surrounding ocean.
 
 UWORM (UnderWater Oil Release Model) version 1.0 is a Python-based simulator for subsurface oil spills with a plume model approach.
 
