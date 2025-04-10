@@ -1,4 +1,4 @@
-## Near-field 
+# Near-field 
 
 In the near-field region of an oil spill, oil parcels behave collectively, expanding like a plume in the surrounding ocean.
 
@@ -37,20 +37,36 @@ This will do:
 
 The near-field simulation will run, depending on the oil and ambient conditions, up to a **neutral-buoyancy** depth.
 
-## Study-case
+# Study-case
 
-[Here](/examples/MEDSEA) you have a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
+[Here](/examples/MEDSEA) you have all the data and code for a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
 
-### Mediterranean Sea
-In the Adriatic Sea, right above the Otranto Strait, a potential threat for an oil spill event is the AQUILA2 ENI platform (18.327114 E ; 40.930188 N) at a depth of 800 m:
-![med](/examples/MEDSEA/MED0min.png)
+In the Otranto Strait in the Adriatic Sea, a potential threat for an oil spill event is 
 
-Let us consider a potential oil spill, starting on 1st August 1995 at 12 am. 
-The near-field simulation predicts a plume phase of 40 min, reaching a depth of -580 m and a horizontal spreading of 200 m, together with a south-eastward drift:
-![med](/examples/MEDSEA/run000000/PICS/traj_env_xz.png)
+- AQUILA2 ENI platform (18.327114 E ; 40.930188 N) at a depth of about 800 m. 
 
-While rising, the oil increasingly incorporates water, increasing its density and slowing down to a neutral buoyancy level. While the oil concentration diminishes in time, the plume velocity decreases to zero:
-![med](/examples/MEDSEA/run000000/PICS/oilconc_vel.png)
+The spill starts on 1st August 1995 at 12 am. 
 
-Due to loss of momentum, the plume corporate behavior is then lost and single oil parcels evolve independently. The second-stage of the deep spill evolution is modelled with a [Far-field simulator](https://github.com/GiuliaGronchi/FarParcels).
+<img src="/examples/MEDSEA/MED0min.png" width="600">
+
+
+The near-field simulation is run and predicts a plume phase output:
+
+- reaching buoyant depth of -580 m with total lateral spreading of approximately 200 m
+  
+- with a south-eastward currents drift
+  
+- total approximate duration 40 min
+
+<img src="/examples/MEDSEA/run000000/PICS/traj_env_xz.png" width="600">
+
+Key: The rising plume incorporates water, increasing density and decelerating up to a neutral buoyancy depth below the surface. 
+
+Together with loss of momentum, oil concentration inside the plume decreases in favour of water concentration:
+
+
+<img src="/examples/MEDSEA/run000000/PICS/oilconc_vel.png" width="600">
+
+After this moment, the plume collective behavior is lost and oil parcels start to move independently. 
+The second-stage of the deep spill evolution is modelled [here](https://github.com/GiuliaGronchi/FarParcels).
 
