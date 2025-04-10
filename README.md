@@ -1,25 +1,22 @@
 # Near-field 
 
 In the near-field region of an oil spill, oil parcels behave collectively, expanding like a plume in the surrounding ocean.
-
-UWORM (UnderWater Oil Release Model) version 1.0 is a Python-based simulator for subsurface oil spills with a plume model approach.
+The near-field version 1.0 is a Python-based simulator for subsurface oil spills with a plume model approach.
 
 ### Pre-configuration
-To run the model, create a pre-configured conda environment:
+Create a pre-configured conda environment:
 
     conda env create -n uworm environment.yml
     
-### Set up a spill scenario
-To set up a new oil spill scenario, fill the relevant fields in the UWORM-1/namelist files .yaml
+### Set up a spill 
+To set up a new oil spill scenario, fill the relevant fields in the namelist files _.yaml_
 
-- Define the spill **release**, such as spill location and nozzle diameter within Release.yaml
-- Select the **ambient** ocean data (temperature, salinity, zonal and meridional currents) within Ambient.yaml
-  
-The ocean data will be automatically collected and downloaded from [Copernicus Marine Data Store](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
+- Fill up the spill **release**, spill location and nozzle diameter values in _Release.yaml_
+- Choose the time-relevant **ambient ocean** data (temperature, salinity, zonal and meridional currents) in _Ambient.yaml_. It will automatically be collected and downloaded from [Copernicus Marine Data Store](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
 
-Decide which visuals and plots you want to see in Render.yaml.
+- Choose visuals and plots in _Render.yaml_
 
-### Run a spill simulation
+### Run oil transport simulation 
 
 Run a near-field simulation:
 
@@ -35,7 +32,7 @@ This will do:
 
 4. Obtain the model output and visualize the plume trajectory, shape evolution, oil concentration, velocity
 
-The near-field simulation will run, depending on the oil and ambient conditions, up to a **neutral-buoyancy** depth.
+Depending on the oil and ambient condition, the near-field simulation is run up to a **neutral-buoyancy** depth.
 
 # Study-case
 
