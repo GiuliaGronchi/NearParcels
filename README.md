@@ -47,7 +47,7 @@ In the Otranto Strait in the Adriatic Sea, a potential threat for an oil spill e
 
 The spill starts on 1st August 1995 at 12 am. 
 
-<img src="/examples/MEDSEA/MED0min.png" width="600">
+<img src="/examples/MEDSEA/MED0min.png" width="400">
 
 
 The near-field simulation is run and predicts a plume phase output:
