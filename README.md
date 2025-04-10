@@ -47,8 +47,9 @@ In the Otranto Strait in the Adriatic Sea, a potential threat for an oil spill e
 
 The spill starts on 1st August 1995 at 12 am. 
 
-<img src="/examples/MEDSEA/MED0min.png" width="400">
-
+<center>
+<img src="/examples/MEDSEA/MED0min.png" width="500" class="center">
+</center>
 
 The near-field simulation is run and predicts a plume phase output:
 
@@ -58,14 +59,17 @@ The near-field simulation is run and predicts a plume phase output:
   
 - total approximate duration 40 min
 
+<center>
 <img src="/examples/MEDSEA/run000000/PICS/traj_env_xz.png" width="600">
+</center>
 
 Key: The rising plume incorporates water, increasing density and decelerating up to a neutral buoyancy depth below the surface. 
 
 Together with loss of momentum, oil concentration inside the plume decreases in favour of water concentration:
 
-
-<img src="/examples/MEDSEA/run000000/PICS/oilconc_vel.png" width="600">
+<center>
+<img src="/examples/MEDSEA/run000000/PICS/oilconc_vel.png" width="600" class="center">
+</center>
 
 After this moment, the plume collective behavior is lost and oil parcels start to move independently. 
 The second-stage of the deep spill evolution is modelled [here](https://github.com/GiuliaGronchi/FarParcels).
