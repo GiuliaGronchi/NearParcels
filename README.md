@@ -12,7 +12,7 @@ Create a pre-configured conda environment:
 To set up a new oil spill scenario, fill the relevant fields in the namelist files _.yaml_
 
 - Fill up the spill **release**, spill location and nozzle diameter values in _Release.yaml_
-- Choose the time-relevant **ambient ocean** data (temperature, salinity, zonal and meridional currents) in _Ambient.yaml_. It will automatically be collected and downloaded from [Copernicus Marine Data Store](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
+- Choose the time-relevant **ambient ocean** data (temperature, salinity, zonal and meridional currents) in _Ambient.yaml_. It will automatically be collected and downloaded from [Copernicus Marine](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
 
 - Choose visuals and plots in _Render.yaml_
 
