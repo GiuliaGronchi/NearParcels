@@ -1,73 +1,115 @@
-# Near-field 
+# Near-field: Subsurface Oil Spill Simulation
 
-In the near-field region of an oil spill, oil parcels behave collectively, expanding like a plume in the surrounding ocean.
-The near-field version 1.0 is a Python-based simulator for subsurface oil spills with a plume model approach.
+**Python-based simulation framework for modelling near-field dynamics of deep oil spills in the ocean.**
 
-### Pre-configuration
-Create a pre-configured conda environment:
+In the **near-field** region of an oil spill, oil parcels exhibit collective plume-like behavior as they rise and interact with ambient ocean stratification.  
+This model (v1.0) captures the evolution of a subsurface plume driven by buoyancy, momentum, and entrainment processes.
 
-    conda env create -n uworm environment.yml
-    
-### Set up a spill 
-To set up a new oil spill scenario, fill the relevant fields in the namelist files _.yaml_
+---
 
-- Fill up the spill **release**, spill location and nozzle diameter values in _Release.yaml_
-- Choose the time-relevant **ambient ocean** data (temperature, salinity, zonal and meridional currents) in _Ambient.yaml_. It will automatically be collected and downloaded from [Copernicus Marine](https://data.marine.copernicus.eu/products) (make sure to have a registered account!)
+## Quick Start
 
-- Choose visuals and plots in _Render.yaml_
+### 1. Pre-configure the Environment
 
-### Run oil transport simulation 
+Create a conda environment using the provided environment file:
 
-Run a near-field simulation:
+```bash
+conda env create -n uworm environment.yml
+```
 
-    python MAIN.py 
-    
-This will do:
+Activate it with:
 
-1. Download the ocean data (u zonal current, v meridional current, T temperature, S salinity)
+```bash
+conda activate uworm
+```
 
-2. Interpolate horizontally the ocean data on the spill location, obtaining depth-profiles of u,v,T,S
+---
 
-3. Run the plume evolution
+### 2. Configure a Spill Scenario
 
-4. Obtain the model output and visualize the plume trajectory, shape evolution, oil concentration, velocity
+Simulation inputs are provided via editable `.yaml` files:
 
-Depending on the oil and ambient condition, the near-field simulation is run up to a **neutral-buoyancy** depth.
+- **`Release.yaml`**  
+  Set the release parameters: location, start time, nozzle diameter, oil type.
 
-# Study-case
+- **`Ambient.yaml`**  
+  Specify the ocean background data (temperature, salinity, zonal and meridional currents).  
+  Data is automatically retrieved from [Copernicus Marine](https://data.marine.copernicus.eu/products).  
+  _Note: A registered Copernicus Marine account is required._
 
-[Here](/examples/MEDSEA) you have all the data and code for a pre-run study-case, representing a potential deep oil spill scenario in the Mediterranean Sea.
+- **`Render.yaml`**  
+  Select output plots and figures for visualization.
 
-In the Otranto Strait in the Adriatic Sea, a potential threat for an oil spill event is 
+---
 
-- AQUILA2 ENI platform (18.327114 E ; 40.930188 N) at a depth of about 800 m. 
+### 3. Run the Simulation
 
-The spill starts on 1st August 1995 at 12 am. 
+Run the main simulation script:
 
-<center>
-<img src="/examples/MEDSEA/MED0min.png" width="500" class="center">
-</center>
+```bash
+python MAIN.py
+```
 
-The near-field simulation is run and predicts a plume phase output:
+The model will:
 
-- reaching buoyant depth of -580 m with total lateral spreading of approximately 200 m
-  
-- with a south-eastward currents drift
-  
-- total approximate duration 40 min
+1. Download ambient ocean data (u, v, T, S)
+2. Interpolate the data at the spill location to build depth profiles
+3. Simulate plume evolution up to a **neutral-buoyancy** depth
+4. Output visualizations of the plume trajectory, shape, oil concentration, and vertical velocity
 
-<center>
-<img src="/examples/MEDSEA/run000000/PICS/traj_env_xz.png" width="600">
-</center>
+---
 
-Key: The rising plume incorporates water, increasing density and decelerating up to a neutral buoyancy depth below the surface. 
+## Model Physics
 
-Together with loss of momentum, oil concentration inside the plume decreases in favour of water concentration:
+This near-field model captures the **collective dynamics** of oil parcels rising as a coherent plume.  
+Processes included:
 
-<center>
-<img src="/examples/MEDSEA/run000000/PICS/oilconc_vel.png" width="600" class="center">
-</center>
+- Momentum-driven plume rise  
+- Water entrainment and mixing  
+- Buoyancy adjustment and deceleration  
+- Transition to independent parcel behavior at neutral buoyancy  
 
-After this moment, the plume collective behavior is lost and oil parcels start to move independently. 
-The second-stage of the deep spill evolution is modelled [here](https://github.com/GiuliaGronchi/FarParcels).
+---
+
+## Example: Deep Spill in the Mediterranean Sea
+
+An example study case is provided in [`examples/MEDSEA`](examples/MEDSEA), representing a hypothetical release scenario at the **AQUILA2 ENI platform** in the Otranto Strait (Adriatic Sea).
+
+- **Location:** 40.930188°N, 18.327114°E  
+- **Depth:** 800 meters  
+- **Start time:** 1 August 1995, 12:00 AM
+
+### Initial Spill Snapshot
+
+<img src="/examples/MEDSEA/MED0min.png" alt="Initial condition" width="400"/>
+
+---
+
+### Plume Simulation Results
+
+- Plume rises to a depth of approximately **-580 m**
+- Horizontal spreading reaches **~200 m**
+- Drift direction is **southeastward**, guided by local currents
+- Duration of the plume phase: **~40 minutes**
+
+<img src="/examples/MEDSEA/run000000/PICS/traj_env_xz.png" alt="Trajectory XZ" width="500"/>
+
+---
+
+### Entrainment and Concentration Dynamics
+
+During ascent, the plume entrains water, increasing total density and slowing upward motion.  
+This leads to dilution of oil concentration and a shift toward neutral buoyancy.
+
+<img src="/examples/MEDSEA/run000000/PICS/oilconc_vel.png" alt="Oil concentration and velocity" width="500"/>
+
+---
+
+### Transition to Far-Field Phase
+
+Once the plume reaches its neutral buoyancy, it disperses into independent oil parcels.  
+This **post-plume phase** is simulated using the [FarParcels model](https://github.com/GiuliaGronchi/FarParcels).
+
+---
+
 
