@@ -5,6 +5,12 @@
 In the **near-field** region of an oil spill, oil parcels exhibit collective plume-like behavior as they rise and interact with ambient ocean stratification.  
 This model (v1.0) captures the evolution of a subsurface plume driven by buoyancy, momentum, and entrainment processes.
 
+<br>
+
+<img src="/oil_scheme.png" alt="Initial condition" width="800"/>
+
+<br>
+
 ---
 
 ## Quick Start
